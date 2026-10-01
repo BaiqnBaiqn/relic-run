@@ -42,7 +42,7 @@ function WalletGame(){
     {['disconnected','error'].includes(wallet.status)&&wallet.wallets.map(w=><button key={w.id} className="rr-primary" onClick={()=>void session.connect(w.id)}>{wallet.wallets.length===1?'Connect wallet':`Connect ${w.name}`}</button>)}
     {wallet.status==='unavailable'&&<button className="rr-secondary" onClick={()=>void session.connect()}>Check for wallet</button>}
     {wallet.status==='wrong-network'&&<button className="rr-primary" onClick={()=>void session.switchNetwork()}>Switch to Robinhood</button>}
-    {['connecting','switching-network'].includes(wallet.status)&&<p role="status">Check your wallet…</p>}
+    {['connecting','switching-network'].includes(wallet.status)&&<><p role="status">Check your wallet. If it is locked or not responding, cancel and choose a wallet again.</p><button className="rr-secondary" onClick={()=>session.disconnect()}>Cancel connection</button></>}
     {loading&&<p role="status">Finding your owned Friends…</p>}
     {choosing&&<p role="status">Verifying ownership and artwork…</p>}
     <div className="rr-friend-list">{friends.map(friend=><button key={`${friend.kind}:${friend.id}`} disabled={choosing} onClick={()=>void choose(friend)}><strong>{friend.label}</strong><small>{friend.kind==='genesis'?'Genesis · protected':'Generation · temp-death'}</small><small>{(cooldowns[`${friend.kind}:${friend.id}`]??0)>Date.now()?`Cooldown · ${Math.ceil((cooldowns[`${friend.kind}:${friend.id}`]-Date.now())/60000)} min`:'Ready to explore'}</small></button>)}</div>

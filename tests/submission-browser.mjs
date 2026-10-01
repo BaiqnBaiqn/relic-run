@@ -20,6 +20,7 @@ try{
     const context=await browser.newContext({viewport:{width,height:850},reducedMotion:'reduce'}),page=await context.newPage();
     const game=page.frameLocator('iframe');page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
     const fixture=await installFixture(page,origin,{artworkCall:await createArtworkFixture()});
+    if(width===1100)await page.addInitScript(()=>{const request=window.ethereum.request.bind(window.ethereum);let stall=true;window.ethereum.request=args=>{if(args.method==='eth_accounts'&&stall){stall=false;return new Promise(()=>{});}return request(args);};});
     let artworkFails=false;
     await page.route(/^https:\/\/rpc\.mainnet\.chain\.robinhood\.com\/?$/,async route=>{
       if(route.request().method()!=='POST')return route.fallback();
@@ -29,6 +30,7 @@ try{
       return route.fulfill({json:Array.isArray(body)?errors:errors[0],headers:{'access-control-allow-origin':'*'}});
     });
     await page.goto(origin+'/?mode=guest');
+    if(width===1100){await page.getByRole('button',{name:'Cancel connection',exact:true}).click();assert.equal(await page.locator('iframe').count(),0,'A stalled restore can be cancelled without opening the game');}
     await page.getByRole('button',{name:'Connect wallet',exact:true}).waitFor();
     assert.equal(await page.locator('iframe').count(),0,'Query parameters cannot bypass ownership');
     assert.equal(await page.getByRole('link',{name:'Back to guest play'}).count(),0);
