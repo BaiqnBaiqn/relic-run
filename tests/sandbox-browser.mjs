@@ -25,7 +25,7 @@ try{
   await page.getByRole('button',{name:'Connect wallet',exact:true}).click();
   const select=async()=>{const connect=page.getByRole('button',{name:'Connect wallet',exact:true});await connect.or(page.getByRole('button',{name:/^Friend #7730\b/})).first().waitFor();if(await connect.isVisible())await connect.click();await page.getByRole('button',{name:/^Friend #7730\b/}).click();await game.locator('.rr-game').waitFor();await game.locator('.rr-loading').waitFor({state:'detached'});};
   await select();const read=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SANDBOX_SAVE_KEY);
-  const savedWhen=async predicate=>{await page.waitForFunction(({key,code})=>new Function('world','return ('+code+')(world)')(JSON.parse(localStorage.getItem(key))),{key:SANDBOX_SAVE_KEY,code:predicate.toString()});return read();};
+  const savedWhen=async condition=>{await page.waitForFunction(({key,condition})=>{const p=Object.values(JSON.parse(localStorage.getItem(key)).accounts)[0];return condition==='chest'?p.chests===1:condition==='active'?p.active?.ended===false:p.active?.ended===true;},{key:SANDBOX_SAVE_KEY,condition},{polling:100});return read();};
   assert.equal(await page.locator('iframe').getAttribute('sandbox'),'allow-scripts');
   assert.deepEqual(await game.locator('body').evaluate(()=>{const denied={};for(const [key,run]of Object.entries({storage:()=>localStorage.getItem('x'),parent:()=>window.parent.document.body})){try{run();denied[key]=false;}catch(e){denied[key]=e.name==='SecurityError';}}return denied;}),{storage:true,parent:true});
   await page.screenshot({path:'artifacts/submission-sdk-camp.png',fullPage:true});
@@ -35,7 +35,7 @@ try{
   await game.getByRole('button',{name:'Open chest · 250 GEMZ',exact:true}).click();
   await game.getByRole('button',{name:'Retry saving',exact:true}).waitFor();
   await game.getByRole('button',{name:'Retry saving',exact:true}).click();
-  let saved=await savedWhen(w=>Object.values(w.accounts)[0].chests===1);
+  let saved=await savedWhen('chest');
   assert.equal(saved.accounts[scope].gemz,250);assert.ok(validateEconomy(saved));
   const item=saved.accounts[scope].lastChest;
   await game.getByRole('button',{name:'Close',exact:true}).click();
@@ -43,7 +43,7 @@ try{
   assert.equal((await read()).accounts[scope].lastChest,item);
   assert.equal((await read()).accounts[scope].characters[key].inventory[item],1);
   await game.getByRole('button',{name:'Enter · 100 RF',exact:true}).click();await page.clock.runFor(100);
-  await savedWhen(w=>Object.values(w.accounts)[0].active?.ended===false);
+  await savedWhen('active');
   const route=[[720,680],[760,300],[480,180],[200,300],[200,680],[480,760]];let point=0,last=-1;
   for(let i=0;i<260;i++){
     const phase=await game.locator('.rr-game').getAttribute('data-phase');if(phase==='won')break;assert.notEqual(phase,'dead');
@@ -54,13 +54,13 @@ try{
     const ability=game.getByRole('button',{name:'Use ability',exact:true});if(await ability.isEnabled())await ability.click({force:true});await page.clock.runFor(600);
   }
   assert.equal(await game.locator('.rr-game').getAttribute('data-phase'),'won');
-  saved=await savedWhen(w=>Object.values(w.accounts)[0].active?.ended===true);
+  saved=await savedWhen('ended');
   assert.equal(saved.accounts[scope].characters[key].clears,1);assert.equal(saved.accounts[scope].active.bossClaimed,true);assert.ok(validateEconomy(saved));
   assert.equal(saved.pool.rf,80*RF);assert.ok(saved.accounts[scope].gemz>=330&&saved.accounts[scope].gemz<=370);
   await page.screenshot({path:'artifacts/submission-sdk-clear.png',fullPage:true});
   await page.reload();await select();assert.deepEqual(await read(),saved,'Boss reward is not recredited on reload');
   await game.getByRole('button',{name:'Enter · 100 RF',exact:true}).click();
-  await savedWhen(w=>Object.values(w.accounts)[0].active?.ended===false);
+  await savedWhen('active');
   await page.reload();await select();saved=await read();
   assert.equal(saved.accounts[scope].active.ended,true);assert.ok(saved.accounts[scope].characters[key].lockedUntil>Date.now());
   assert.equal(saved.accounts[scope].characters[key].inventory[205],0);
