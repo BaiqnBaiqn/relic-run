@@ -59,7 +59,10 @@ L2 200/230, L3 400/520, L4 800/1,160, L5 1,600/2,560. Levels 1–2 use minor pot
 RF value. Each level has four regular soulbound weapons (one per weapon family), plus its own jackpot exclusive.
 
 See ECONOMY.md for rules and accounting, and art/NOTICE.md for artwork credits.
-game.json is a local economy reference, not an SDK chance-game deployment.
+economy.json documents the actual custom economy. game.json supplies unused reference
+metadata required by the SDK runtime; no reference chance actions are called.
+The public build uses ConnectedGameHost and GameSession with a sandbox save
+bridge keyed by canonical NFT wallet. See the root README for hosting and checks.
 
 Camp now includes an RF / GEMZ cycle guide, contribution previews, and playable expeditions
 for levels 2–5. See the cycle review and expedition designs in ECONOMY.md.
@@ -73,7 +76,8 @@ decorative animation while keeping combat telegraphs visible.
 
 
 Camp services: choose a Rarefriend in the roster and see its cooldown. All gear,
-potions and consumed stats belong to that Friend; the account shares RF and GEMZ.
+potions and consumed stats belong to that Friend. In the public sandbox, each
+canonical NFT wallet also has its own RF and GEMZ purse.
 The bottom-left dock holds equipped items, backpack access and the potion stash.
 The bottom-right shop has four chest collections starting at 250 GEMZ. Redemption shows
 the global RF pot, settlement countdown and projected pro-rata share.
