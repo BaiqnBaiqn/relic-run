@@ -1,0 +1,350 @@
+{
+  "name": "Relic Run · local economy reference",
+  "version": 3,
+  "deployment": "local-simulation-only",
+  "entryRF": 100,
+  "allocationBps": [
+    8000,
+    1500,
+    500
+  ],
+  "redemption": {
+    "scope": "global-across-levels",
+    "settlement": "daily-00:00-UTC",
+    "distribution": "pro-rata",
+    "gemzConsumed": true
+  },
+  "jackpot": {
+    "scope": "per-level",
+    "trigger": "boss-clear-only",
+    "chanceBps": 25,
+    "winnerBps": 8000,
+    "carryBps": 2000,
+    "weapon": 104
+  },
+  "chest": {
+    "costGemz": 250,
+    "items": 1,
+    "tiers": [
+      {
+        "tier": 1,
+        "chancePpm": 950000
+      },
+      {
+        "tier": 2,
+        "chancePpm": 40000
+      },
+      {
+        "tier": 3,
+        "chancePpm": 8000
+      },
+      {
+        "tier": 4,
+        "chancePpm": 1905
+      },
+      {
+        "tier": 5,
+        "chancePpm": 95
+      }
+    ],
+    "rollSize": 1000000
+  },
+  "fullClearGemz": 100,
+  "levels": [
+    {
+      "id": 1,
+      "name": "The Overgrowth",
+      "boss": "Hollow Warden",
+      "entryRF": 100,
+      "fullClearGemz": 100,
+      "minions": 11,
+      "monsterGemz": 3,
+      "bossGemz": 67,
+      "bossHP": 650,
+      "weapons": [
+        401,
+        402,
+        403,
+        404
+      ],
+      "jackpotWeapon": 104,
+      "fullClearGemzRange": [
+        80,
+        120
+      ],
+      "fullClearGemzMeaning": "mean",
+      "bossGemzMeaning": "mean",
+      "hpScale": 1.65,
+      "damage": 5,
+      "maxEntryMultiple": 50
+    },
+    {
+      "id": 2,
+      "name": "The Sunken Boardwalk",
+      "boss": "Tidemouth Crab",
+      "entryRF": 200,
+      "fullClearGemz": 230,
+      "minions": 11,
+      "monsterGemz": 6,
+      "bossGemz": 164,
+      "bossHP": 1900,
+      "weapons": [
+        411,
+        412,
+        413,
+        414
+      ],
+      "jackpotWeapon": 114,
+      "fullClearGemzRange": [
+        184,
+        276
+      ],
+      "fullClearGemzMeaning": "mean",
+      "bossGemzMeaning": "mean",
+      "hpScale": 5,
+      "damage": 44,
+      "maxEntryMultiple": 250
+    },
+    {
+      "id": 3,
+      "name": "The Glassroot Quarry",
+      "boss": "Prismback Tortoise",
+      "entryRF": 400,
+      "fullClearGemz": 520,
+      "minions": 11,
+      "monsterGemz": 14,
+      "bossGemz": 366,
+      "bossHP": 3800,
+      "weapons": [
+        421,
+        422,
+        423,
+        424
+      ],
+      "jackpotWeapon": 124,
+      "fullClearGemzRange": [
+        416,
+        624
+      ],
+      "fullClearGemzMeaning": "mean",
+      "bossGemzMeaning": "mean",
+      "hpScale": 9,
+      "damage": 48,
+      "maxEntryMultiple": 1250
+    },
+    {
+      "id": 4,
+      "name": "The Cinder Orchard",
+      "boss": "The Kilnkeeper",
+      "entryRF": 800,
+      "fullClearGemz": 1160,
+      "minions": 11,
+      "monsterGemz": 32,
+      "bossGemz": 808,
+      "bossHP": 6500,
+      "weapons": [
+        431,
+        432,
+        433,
+        434
+      ],
+      "jackpotWeapon": 134,
+      "fullClearGemzRange": [
+        928,
+        1392
+      ],
+      "fullClearGemzMeaning": "mean",
+      "bossGemzMeaning": "mean",
+      "hpScale": 15,
+      "damage": 72,
+      "maxEntryMultiple": 6250
+    },
+    {
+      "id": 5,
+      "name": "The Starfall Sanctuary",
+      "boss": "The Astral Gardener",
+      "entryRF": 1600,
+      "fullClearGemz": 2560,
+      "minions": 11,
+      "monsterGemz": 70,
+      "bossGemz": 1790,
+      "bossHP": 10000,
+      "weapons": [
+        441,
+        442,
+        443,
+        444
+      ],
+      "jackpotWeapon": 144,
+      "fullClearGemzRange": [
+        2048,
+        3072
+      ],
+      "fullClearGemzMeaning": "mean",
+      "bossGemzMeaning": "mean",
+      "hpScale": 23,
+      "damage": 105,
+      "maxEntryMultiple": 31250
+    }
+  ],
+  "gemz": {
+    "kind": "internal-game-currency",
+    "transferable": false,
+    "uses": [
+      "chests",
+      "global-rf-redemption"
+    ],
+    "bossVariance": "symmetric +/-20% of the full-clear mean",
+    "precision": "quarter-GEMZ, carried exactly; spending uses whole GEMZ"
+  },
+  "fullClearGemzRange": [
+    80,
+    120
+  ],
+  "chests": [
+    {
+      "id": "overgrowth",
+      "name": "Overgrowth chest",
+      "cost": 250,
+      "floor": 1,
+      "color": "#B9D984",
+      "description": "A humble chest with the occasional hidden treasure.",
+      "odds": [
+        {
+          "tier": 1,
+          "chancePpm": 950000
+        },
+        {
+          "tier": 2,
+          "chancePpm": 40000
+        },
+        {
+          "tier": 3,
+          "chancePpm": 8000
+        },
+        {
+          "tier": 4,
+          "chancePpm": 1905
+        },
+        {
+          "tier": 5,
+          "chancePpm": 95
+        }
+      ]
+    },
+    {
+      "id": "tidebound",
+      "name": "Tidebound chest",
+      "cost": 2500,
+      "floor": 2,
+      "color": "#7DB4DB",
+      "description": "Mostly T2. A good shot at T3; rare T4 and T5 finds.",
+      "odds": [
+        {
+          "tier": 2,
+          "chancePpm": 780000
+        },
+        {
+          "tier": 3,
+          "chancePpm": 200000
+        },
+        {
+          "tier": 4,
+          "chancePpm": 19050
+        },
+        {
+          "tier": 5,
+          "chancePpm": 950
+        }
+      ]
+    },
+    {
+      "id": "prismatic",
+      "name": "Prismatic chest",
+      "cost": 25000,
+      "floor": 3,
+      "color": "#B3A0D8",
+      "description": "Mostly T3. A good shot at T4; a rare T5 surprise.",
+      "odds": [
+        {
+          "tier": 3,
+          "chancePpm": 800000
+        },
+        {
+          "tier": 4,
+          "chancePpm": 190500
+        },
+        {
+          "tier": 5,
+          "chancePpm": 9500
+        }
+      ]
+    },
+    {
+      "id": "astral",
+      "name": "Astral chest",
+      "cost": 250000,
+      "floor": 4,
+      "color": "#F2CE68",
+      "description": "T4 or T5 only. An endgame chest for a legendary hunt.",
+      "odds": [
+        {
+          "tier": 4,
+          "chancePpm": 905000
+        },
+        {
+          "tier": 5,
+          "chancePpm": 95000
+        }
+      ]
+    }
+  ],
+  "t5ExpectedGemzCostVsT1": 10000,
+  "entryBoost": {
+    "curve": "1 + 19 * ln(1 + (multiple - 1) / 12) / ln(1 + 49 / 12)",
+    "gemz": "exact entry multiple",
+    "weaponChanceBaseBps": 500,
+    "overflow": "guaranteed weapons plus fractional extra roll",
+    "potionsScale": false,
+    "jackpotScales": false,
+    "weaponWeightsBps": [
+      2500,
+      2500,
+      2500,
+      2500
+    ]
+  },
+  "potions": {
+    "baseHealth": 10,
+    "drinksPerStat": 20,
+    "minorPoints": 1,
+    "majorPoints": 2,
+    "healthPerPoint": 5,
+    "attackPercentPerPoint": 5,
+    "speedPerPoint": 5,
+    "dexterityPercentPerPoint": 5
+  },
+  "fortuneFang": {
+    "id": 449,
+    "level": 5,
+    "family": "dagger",
+    "soulbound": true,
+    "baseChanceBps": 25,
+    "entryBoostsChance": true,
+    "gemzBonusBps": 2500,
+    "applies": "all kills in runs entered with the weapon equipped",
+    "independentOf": [
+      "regular-weapons",
+      "jackpot"
+    ]
+  },
+  "seasons": {
+    "durationHours": 24,
+    "boundary": "00:00 UTC",
+    "scope": "global across all levels",
+    "allocationBps": 8000,
+    "payout": "pro rata by GEMZ committed in that season",
+    "emptySeason": "RF carries forward",
+    "historyLimit": 30
+  }
+}

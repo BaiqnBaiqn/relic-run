@@ -1,0 +1,11 @@
+.rr-sdk-host{width:100%;--rf-game-max-width:1240px;--rf-game-aspect-ratio:auto}
+.rr-trusted-status{display:flex;align-items:center;gap:14px;padding:9px 12px;background:#f6f5ef;border:1px solid #111;border-bottom:0;font:11px monospace;flex-wrap:wrap}
+.rr-trusted-status button{margin-left:auto;border:1px solid #111;background:#b9d984;padding:7px;font:inherit}
+.rr-sdk-host .rf-game-frame{width:100%;max-width:none;height:min(1110px,calc(100dvh - 85px));min-height:700px;aspect-ratio:auto}
+.rr-sdk-host .rf-frame-toolbar{position:relative;inset:auto;display:flex;height:32px;background:#f6f5ef;border-bottom:1px solid #111}
+.rr-sdk-host .rf-frame-chrome{display:flex;flex-direction:column}
+.rr-sdk-host .rf-frame-viewport{position:relative;flex:1;min-height:0}
+/* The unused SDK chance ledger must not masquerade as the expedition purse.
+   Wallet identity/selection is available in the trusted bar; no live actions exist. */
+.rr-sdk-host .rf-frame-toolbar button[aria-label="Open Friend wallet"]{display:none}
+@media(max-width:650px){body:has(.rr-sdk-host){padding:0}.rr-sdk-host .rf-game-frame{height:calc(100dvh - 64px);min-height:720px}.rr-trusted-status{font-size:9px;gap:7px}.rr-trusted-status span:first-child{flex:1}.rr-trusted-status button{padding:7px}}

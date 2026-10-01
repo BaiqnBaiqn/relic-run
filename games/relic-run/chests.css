@@ -1,0 +1,45 @@
+/* The equipped row uses the same framed Blender renders as the catalog/reveal. */
+.rr-camp-dock .rr-equipped-slot>svg{width:56px;height:56px;padding:3px;background:#edf0e7;outline:1px solid #c8cfbe}
+.rr-camp-dock .rr-equipped-slot{gap:10px;padding:8px}.rr-camp-dock .rr-equipped-slot strong{font-size:10px}
+.rr-shop-summary{display:flex;justify-content:space-between;gap:16px;padding-bottom:13px;border-bottom:1px solid #aaa;font-size:9px}.rr-shop-summary b{display:block;font-size:15px;line-height:1.5}.rr-shop-summary>span:last-child{text-align:right}.rr-shop-summary>span:last-child b{font-size:11px}
+.rr-chest-choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.rr-chest-choices button{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #aaa;background:white;padding:9px;color:#111}.rr-chest-choices button[aria-pressed="true"]{border:2px solid #111;box-shadow:3px 3px 0 #111;background:color-mix(in srgb,var(--chest-color) 23%,white)}.rr-chest-choices .rr-chest-art{width:70px;height:64px;flex:none}.rr-chest-choices strong{font-size:11px;display:block}.rr-chest-choices small{display:block;font-size:8px;color:#555}.rr-chest-choices b{display:block;font-size:11px;margin-top:4px}
+.rr-chest-reveal{border:1px solid #111;background:#eeeede;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px;box-shadow:3px 3px 0 #111;isolation:isolate}
+.rr-chest-theatre{position:relative;height:175px;width:100%;display:grid;place-items:center;isolation:isolate}.rr-chest-theatre>.rr-chest-art{width:190px;height:164px;z-index:2}.rr-chest-floor{position:absolute;bottom:11px;width:180px;height:34px;border-radius:50%;border:1px solid #aaa;background:color-mix(in srgb,var(--chest-color) 35%,transparent);transform:scaleY(.55)}
+.rr-chest-rays{position:absolute;inset:-50%;z-index:0;background:repeating-conic-gradient(from 0deg,transparent 0deg 18deg,var(--loot-color) 19deg 30deg,transparent 31deg 45deg);opacity:0;pointer-events:none}.rr-chest-lid{transform-origin:90px 70px;transition:transform .75s cubic-bezier(.2,.8,.2,1)}
+.rr-chest-reveal[data-phase="charging"] .rr-chest-theatre>.rr-chest-art{animation:rr-chest-rattle .18s ease-in-out infinite alternate}
+.rr-chest-reveal[data-phase="charging"] .rr-chest-floor{animation:rr-chest-pulse .65s ease-in-out infinite alternate}
+.rr-chest-reveal[data-phase="unlocking"] .rr-chest-lid,.rr-chest-reveal[data-phase="emerging"] .rr-chest-lid{transform:translateY(-28px) rotate(-12deg)}
+.rr-chest-reveal[data-phase="unlocking"] .rr-chest-lock,.rr-chest-reveal[data-phase="emerging"] .rr-chest-lock{opacity:0}
+.rr-chest-reveal[data-phase="unlocking"] .rr-chest-rays{opacity:.35;animation:rr-chest-ray-turn 10s linear infinite}
+.rr-chest-reveal[data-phase="emerging"] .rr-chest-rays,.rr-chest-reveal[data-phase="revealed"] .rr-chest-rays{opacity:.38;animation:rr-chest-ray-turn 18s linear infinite}
+.rr-chest-reveal[data-phase="emerging"] .rr-chest-theatre>.rr-chest-art{opacity:.23;transform:translateY(25px) scale(.85);transition:all .65s}
+.rr-chest-prize{position:absolute;z-index:3;top:8px;display:grid;place-items:center;width:144px;height:144px}.rr-chest-reveal[data-phase="emerging"] .rr-chest-prize{filter:brightness(0);animation:rr-chest-rise 1.3s ease-out both}.rr-chest-reveal[data-phase="revealed"] .rr-chest-prize{animation:rr-chest-arrival .55s ease-out both}
+.rr-prize-tier{position:absolute;bottom:0;z-index:4;font-size:9px;letter-spacing:1.5px;padding:4px 12px;background:var(--loot-color);border:1px solid #111}
+.rr-chest-announcement{z-index:4;position:relative;max-width:100%;margin-top:7px}.rr-chest-announcement strong{display:block;font-size:19px;line-height:1.4}.rr-chest-announcement small{display:block;font-size:9px;margin-top:5px}.rr-chest-reveal>.rr-text-button{margin-top:8px;z-index:4}
+.rr-chest-reveal[data-phase="charging"],.rr-chest-reveal[data-phase="unlocking"],.rr-chest-reveal[data-phase="emerging"]{margin-block:20px;min-height:300px;justify-content:center}.rr-chest-recipient{font-size:10px;color:#555;line-height:1.7}.rr-chest-pitch{font-size:11px;margin:18px 0 12px}.rr-chest-buy{display:flex;align-items:center;gap:12px;margin-bottom:12px}.rr-chest-buy .rr-primary{flex:1;background:var(--sun);font-size:12px}.rr-chest-buy span{font-size:9px;max-width:135px}
+.rr-chest-odds{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid #111;margin:18px 0 10px;background:white;text-align:center}.rr-chest-odds>span{border-right:1px solid #bbb;padding:9px 4px;font-size:10px}.rr-chest-odds>span:last-child{border:0;background:#fff2c7}.rr-chest-odds b{display:block;font-size:12px;margin-bottom:4px}.rr-chest-math{border-top:1px solid #aaa;padding-top:12px;font-size:11px}.rr-chest-math summary{font-weight:bold}
+@keyframes rr-chest-rattle{from{transform:rotate(-2deg) translateX(-1px)}to{transform:rotate(2deg) translateX(1px)}}
+@keyframes rr-chest-pulse{from{box-shadow:0 0 0 2px #fff9}to{box-shadow:0 0 18px 12px #fff9}}
+@keyframes rr-chest-ray-turn{to{transform:rotate(360deg)}}
+@keyframes rr-chest-rise{from{opacity:0;transform:translateY(32px) scale(.3)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes rr-chest-arrival{0%{transform:scale(.75);opacity:.4}65%{transform:scale(1.08);opacity:1}100%{transform:scale(1)}}
+@media(max-width:950px){.rr-camp-dock .rr-equipped-slot>svg{width:46px;height:46px}.rr-camp-dock .rr-equipped-slot{padding:5px;gap:8px}}
+@media(max-width:450px){.rr-camp-dock .rr-equipped-slot{flex-direction:row;gap:5px;align-items:center;padding:4px}.rr-camp-dock .rr-equipped-slot>svg{width:39px;height:39px;padding:1px}.rr-camp-dock .rr-equipped-slot strong{font-size:8px}.rr-camp-dock .rr-equipped-slot span{width:auto;flex:1}.rr-chest-choices{gap:8px}.rr-chest-choices button{padding:8px 5px;gap:4px;flex-direction:column;text-align:center}.rr-chest-choices .rr-chest-art{width:64px;height:48px}.rr-chest-choices strong,.rr-chest-choices b{font-size:10px}.rr-chest-choices small{font-size:8px}.rr-chest-announcement strong{font-size:17px}.rr-chest-buy{align-items:stretch;flex-direction:column;gap:7px}.rr-chest-buy span{max-width:none;text-align:center}.rr-chest-odds>span{font-size:9px}.rr-chest-theatre{height:158px}.rr-chest-theatre>.rr-chest-art{width:170px;height:147px}.rr-chest-prize{top:0;width:132px;height:132px}.rr-chest-prize>svg{width:120px;height:120px}.rr-prize-tier{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.rr-chest-reveal *{animation:none!important;transition:none!important}}
+
+.rr-chest-reveal[data-phase="idle"] .rr-chest-theatre{height:145px}.rr-chest-reveal[data-phase="idle"] .rr-chest-theatre>.rr-chest-art{width:166px;height:143px}.rr-chest-odds{margin-top:14px}.rr-chest-pitch{margin-top:10px}
+.rr-chest-reveal[data-phase="ready"]{margin-block:20px;min-height:300px;justify-content:center}
+.rr-chest-reveal[data-phase="ready"] .rr-chest-lid{transform:translateY(-28px) rotate(-12deg)}
+.rr-chest-reveal[data-phase="ready"] .rr-chest-lock{opacity:0}
+.rr-chest-reveal[data-phase="ready"] .rr-chest-theatre>.rr-chest-art{opacity:.15;transform:translateY(25px) scale(.85)}
+.rr-chest-reveal[data-phase="ready"] .rr-chest-prize{filter:brightness(0);animation:rr-treasure-hover 2s ease-in-out infinite alternate}
+.rr-chest-reveal[data-phase="ready"] .rr-chest-rays{opacity:.38;animation:rr-chest-ray-turn 18s linear infinite}
+.rr-reveal-treasure{position:relative;z-index:4;margin-top:16px;background:var(--loot-color)}
+@keyframes rr-treasure-hover{to{transform:translateY(-6px)}}
+.rr-loot-comparison{margin-top:20px;border-top:1px solid #111;padding-top:12px}
+.rr-loot-comparison h3{font-size:12px}.rr-compare-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rr-compare-cards article{border:1px solid #aaa;padding:12px;background:white;display:flex;flex-direction:column;gap:5px;align-items:flex-start;min-width:0}
+.rr-compare-cards article:last-child{border-color:#111;background:#eff3e7}
+.rr-compare-cards small,.rr-compare-cards span{font-size:9px}.rr-compare-cards strong{font-size:12px}.rr-compare-cards p{font-size:10px;line-height:1.5;margin:0}
+.rr-loot-comparison table caption{text-align:left;font-size:9px;color:#555}.rr-loot-comparison td[data-better="true"]{background:#e5efce}.rr-loot-comparison td[data-better="false"]{background:#f6dfd7}
+.rr-loot-comparison>small{display:block;font-size:9px;margin-top:8px}.rr-loot-comparison>.rr-primary{white-space:normal;max-width:100%}

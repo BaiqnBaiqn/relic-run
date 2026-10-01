@@ -1,0 +1,14 @@
+{
+  "name": "Relic Run",
+  "consumable": "Unused runtime reference",
+  "price": "100000000000000000000",
+  "outcomes": [
+    {
+      "name": "Unused runtime reference",
+      "chanceBps": 10000,
+      "reward": "1000000000000000000"
+    }
+  ],
+  "adapterOnly": true,
+  "economy": "See economy.json; SDK chance actions are not used."
+}

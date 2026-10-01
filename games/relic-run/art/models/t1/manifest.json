@@ -1,0 +1,195 @@
+{
+  "palette": [
+    "#000000",
+    "#ffffff"
+  ],
+  "models": [
+    {
+      "name": "sword",
+      "itemId": 221,
+      "file": "sword.glb",
+      "source": "source/sword.glb",
+      "sourceSha256": "a20151531c3fb2ef1a858f4c9391c045a082f7b62bc9050a12262761a991f9ce",
+      "outputSha256": "abb19d1e5d9a5a5d4fe0cfa18f635264e9968006f0734134ee4a6e16e5e1bfe4",
+      "geometrySha256": "1220278cae78dd2f19016664c3c705c671b9ba84944592a3eac3f98ef22741b2",
+      "textures": [
+        {
+          "name": "atlas0",
+          "width": 32,
+          "height": 32,
+          "before": [
+            "244,244,242",
+            "14,14,16",
+            "92,92,96",
+            "48,48,52",
+            "198,198,199",
+            "148,148,152",
+            "99,99,103",
+            "8,8,10",
+            "23,23,26",
+            "19,19,21",
+            "54,54,56",
+            "35,35,37",
+            "228,228,226",
+            "138,138,142",
+            "255,255,255",
+            "66,66,70",
+            "42,42,46"
+          ],
+          "after": [
+            "255,255,255",
+            "0,0,0"
+          ]
+        }
+      ],
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "name": "dagger",
+      "itemId": 231,
+      "file": "dagger.glb",
+      "source": "source/daggger.glb",
+      "sourceSha256": "3b7e00720e1198cd2cc0fe363480aea424e29d93ff4ff951d8f21056741b1fe2",
+      "outputSha256": "b3199de593847a5bcfe3a8bf8f43924a8e11473abdc7ff42006efbabe52a02e0",
+      "geometrySha256": "d56d6a08d6f995f5c3c784ddec41ce99a3e080085ce2d67de07a918ebfed2d53",
+      "textures": [
+        {
+          "name": "atlas0",
+          "width": 32,
+          "height": 16,
+          "before": [
+            "124,124,124",
+            "244,244,244",
+            "68,68,68",
+            "48,48,48",
+            "31,31,31",
+            "170,170,170",
+            "220,220,220",
+            "238,238,238",
+            "205,205,205",
+            "169,169,169",
+            "58,58,58",
+            "122,122,122"
+          ],
+          "after": [
+            "0,0,0",
+            "255,255,255"
+          ]
+        }
+      ],
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "name": "wand",
+      "itemId": 201,
+      "file": "wand.glb",
+      "source": "source/wand.glb",
+      "sourceSha256": "be5ac8cb974cdbf1fd10436b3cfa04420b2205db59b8a3853e3cfdaf927fe34b",
+      "outputSha256": "6f7e0fc9566116a526c9b9a7dcf013ea8222780f3a870fb89c7e5cb75cdfad34",
+      "geometrySha256": "3bd286389a4f2b79ce40de25f7dca633d3bd0962843d110e64a2a9181136b856",
+      "textures": [
+        {
+          "name": "atlas0",
+          "width": 32,
+          "height": 32,
+          "before": [
+            "121,70,42",
+            "80,42,38",
+            "41,20,35",
+            "33,14,70",
+            "198,152,85",
+            "244,232,255",
+            "163,109,58",
+            "82,42,158",
+            "130,97,226",
+            "189,164,255",
+            "233,221,123",
+            "191,147,67",
+            "131,83,36"
+          ],
+          "after": [
+            "0,0,0",
+            "255,255,255"
+          ]
+        },
+        {
+          "name": "emission0",
+          "width": 32,
+          "height": 32,
+          "before": [
+            "244,232,255",
+            "130,97,226",
+            "189,164,255"
+          ],
+          "after": [
+            "255,255,255"
+          ]
+        }
+      ],
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "name": "bow",
+      "itemId": 211,
+      "file": "bow.glb",
+      "source": "source/bow.glb",
+      "sourceSha256": "9cc4a4298a8fa7e892a831a7d95cf81099597fb957dd028a0557692f9a6905da",
+      "outputSha256": "e08da5c787e03a97567c96cc98ac56c7079c8fad7e6b8f64c0c4972b9bff4928",
+      "geometrySha256": "d99f9d9e8365654b5500f3b4fe25748f1206f422a9484808adb182978538bbbf",
+      "textures": [
+        {
+          "name": "atlas0",
+          "width": 64,
+          "height": 16,
+          "before": [
+            "195,142,83",
+            "240,208,112",
+            "124,84,28",
+            "105,61,50",
+            "61,37,41",
+            "152,95,61",
+            "186,143,60",
+            "162,101,56",
+            "123,68,41",
+            "82,42,34",
+            "238,238,238",
+            "28,28,28"
+          ],
+          "after": [
+            "255,255,255",
+            "0,0,0"
+          ]
+        }
+      ],
+      "validation": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    }
+  ]
+}

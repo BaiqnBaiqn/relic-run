@@ -1,0 +1,41 @@
+{
+  "name": "rare-friends-relic-run",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/guest.mjs",
+    "dev:wallet": "node scripts/guest.mjs --port=4174",
+    "build": "node scripts/guest.mjs --build",
+    "build:wallet": "node scripts/guest.mjs --build",
+    "check": "node scripts/check-economy.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "test:browser": "npm run build && node tests/browser.mjs",
+    "test:guest": "npm run build && node tests/guest.mjs",
+    "test:wallet": "npm run build && node tests/wallet-selection.mjs",
+    "art:models": "node scripts/build-lowpoly.mjs",
+    "art:models:imported": "node scripts/t1-models.mjs && node scripts/t1-model-previews.mjs",
+    "build:submission": "node scripts/build-submission.mjs",
+    "check:contracts": "node scripts/check-contracts.mjs",
+    "test:submission": "npm run build:submission && node tests/submission-browser.mjs",
+    "check:sdk": "friendsdk check games/relic-run",
+    "test:sandbox": "npm run build:submission && node tests/sandbox-browser.mjs"
+  },
+  "dependencies": {
+    "@rarefriends/friendsdk": "file:vendor/rarefriends-friendsdk-0.1.4.tgz",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "viem": "2.56.3"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "esbuild": "^0.28.2",
+    "gltf-validator": "2.0.0-dev.3.10",
+    "playwright": "1.63.0",
+    "pngjs": "7.0.0",
+    "three": "0.180.0",
+    "typescript": "6.0.3"
+  }
+}

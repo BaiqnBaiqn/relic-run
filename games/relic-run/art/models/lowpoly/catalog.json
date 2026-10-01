@@ -1,0 +1,606 @@
+{
+  "types": [
+    {
+      "type": "wand",
+      "slot": "weapon",
+      "label": "Wands"
+    },
+    {
+      "type": "bow",
+      "slot": "weapon",
+      "label": "Bows"
+    },
+    {
+      "type": "sword",
+      "slot": "weapon",
+      "label": "Swords"
+    },
+    {
+      "type": "dagger",
+      "slot": "weapon",
+      "label": "Daggers"
+    },
+    {
+      "type": "dash",
+      "slot": "ability",
+      "label": "Dash"
+    },
+    {
+      "type": "shield",
+      "slot": "ability",
+      "label": "Shield"
+    },
+    {
+      "type": "bash",
+      "slot": "ability",
+      "label": "Bash"
+    },
+    {
+      "type": "heal",
+      "slot": "ability",
+      "label": "Heal"
+    },
+    {
+      "type": "robe",
+      "slot": "armor",
+      "label": "Robes"
+    },
+    {
+      "type": "light",
+      "slot": "armor",
+      "label": "Light armor"
+    },
+    {
+      "type": "heavy",
+      "slot": "armor",
+      "label": "Heavy armor"
+    },
+    {
+      "type": "health",
+      "slot": "ring",
+      "label": "Health rings"
+    },
+    {
+      "type": "attack",
+      "slot": "ring",
+      "label": "Attack rings"
+    },
+    {
+      "type": "dexterity",
+      "slot": "ring",
+      "label": "Dexterity rings"
+    },
+    {
+      "type": "speed",
+      "slot": "ring",
+      "label": "Speed rings"
+    }
+  ],
+  "items": [
+    {
+      "id": 201,
+      "name": "Twig wand",
+      "type": "wand",
+      "tier": 1,
+      "slot": "weapon"
+    },
+    {
+      "id": 202,
+      "name": "Root wand",
+      "type": "wand",
+      "tier": 2,
+      "slot": "weapon"
+    },
+    {
+      "id": 203,
+      "name": "Briar wand",
+      "type": "wand",
+      "tier": 3,
+      "slot": "weapon"
+    },
+    {
+      "id": 204,
+      "name": "Elder wand",
+      "type": "wand",
+      "tier": 4,
+      "slot": "weapon"
+    },
+    {
+      "id": 205,
+      "name": "Heartwood wand",
+      "type": "wand",
+      "tier": 5,
+      "slot": "weapon"
+    },
+    {
+      "id": 211,
+      "name": "Reed bow",
+      "type": "bow",
+      "tier": 1,
+      "slot": "weapon"
+    },
+    {
+      "id": 212,
+      "name": "Willow bow",
+      "type": "bow",
+      "tier": 2,
+      "slot": "weapon"
+    },
+    {
+      "id": 213,
+      "name": "Bramble bow",
+      "type": "bow",
+      "tier": 3,
+      "slot": "weapon"
+    },
+    {
+      "id": 214,
+      "name": "Moonwood bow",
+      "type": "bow",
+      "tier": 4,
+      "slot": "weapon"
+    },
+    {
+      "id": 215,
+      "name": "Worldtree bow",
+      "type": "bow",
+      "tier": 5,
+      "slot": "weapon"
+    },
+    {
+      "id": 221,
+      "name": "Rustblade",
+      "type": "sword",
+      "tier": 1,
+      "slot": "weapon"
+    },
+    {
+      "id": 222,
+      "name": "Ironleaf sword",
+      "type": "sword",
+      "tier": 2,
+      "slot": "weapon"
+    },
+    {
+      "id": 223,
+      "name": "Briar greatsword",
+      "type": "sword",
+      "tier": 3,
+      "slot": "weapon"
+    },
+    {
+      "id": 224,
+      "name": "Elder cleaver",
+      "type": "sword",
+      "tier": 4,
+      "slot": "weapon"
+    },
+    {
+      "id": 225,
+      "name": "Crownfall blade",
+      "type": "sword",
+      "tier": 5,
+      "slot": "weapon"
+    },
+    {
+      "id": 231,
+      "name": "Flint dagger",
+      "type": "dagger",
+      "tier": 1,
+      "slot": "weapon"
+    },
+    {
+      "id": 232,
+      "name": "Leafknife",
+      "type": "dagger",
+      "tier": 2,
+      "slot": "weapon"
+    },
+    {
+      "id": 233,
+      "name": "Thornfang",
+      "type": "dagger",
+      "tier": 3,
+      "slot": "weapon"
+    },
+    {
+      "id": 234,
+      "name": "Nightbriar dagger",
+      "type": "dagger",
+      "tier": 4,
+      "slot": "weapon"
+    },
+    {
+      "id": 235,
+      "name": "Ghostpetal blade",
+      "type": "dagger",
+      "tier": 5,
+      "slot": "weapon"
+    },
+    {
+      "id": 241,
+      "name": "Flicker rune",
+      "type": "dash",
+      "tier": 1,
+      "slot": "ability"
+    },
+    {
+      "id": 242,
+      "name": "Windstep rune",
+      "type": "dash",
+      "tier": 2,
+      "slot": "ability"
+    },
+    {
+      "id": 243,
+      "name": "Gale rune",
+      "type": "dash",
+      "tier": 3,
+      "slot": "ability"
+    },
+    {
+      "id": 244,
+      "name": "Stormstep rune",
+      "type": "dash",
+      "tier": 4,
+      "slot": "ability"
+    },
+    {
+      "id": 245,
+      "name": "Horizon rune",
+      "type": "dash",
+      "tier": 5,
+      "slot": "ability"
+    },
+    {
+      "id": 251,
+      "name": "Pebble ward",
+      "type": "shield",
+      "tier": 1,
+      "slot": "ability"
+    },
+    {
+      "id": 252,
+      "name": "Bark ward",
+      "type": "shield",
+      "tier": 2,
+      "slot": "ability"
+    },
+    {
+      "id": 253,
+      "name": "Thorn ward",
+      "type": "shield",
+      "tier": 3,
+      "slot": "ability"
+    },
+    {
+      "id": 254,
+      "name": "Ironroot ward",
+      "type": "shield",
+      "tier": 4,
+      "slot": "ability"
+    },
+    {
+      "id": 255,
+      "name": "Ancient ward",
+      "type": "shield",
+      "tier": 5,
+      "slot": "ability"
+    },
+    {
+      "id": 261,
+      "name": "Knuckle sigil",
+      "type": "bash",
+      "tier": 1,
+      "slot": "ability"
+    },
+    {
+      "id": 262,
+      "name": "Ram sigil",
+      "type": "bash",
+      "tier": 2,
+      "slot": "ability"
+    },
+    {
+      "id": 263,
+      "name": "Quake sigil",
+      "type": "bash",
+      "tier": 3,
+      "slot": "ability"
+    },
+    {
+      "id": 264,
+      "name": "Ruin sigil",
+      "type": "bash",
+      "tier": 4,
+      "slot": "ability"
+    },
+    {
+      "id": 265,
+      "name": "Cataclysm sigil",
+      "type": "bash",
+      "tier": 5,
+      "slot": "ability"
+    },
+    {
+      "id": 271,
+      "name": "Dew charm",
+      "type": "heal",
+      "tier": 1,
+      "slot": "ability"
+    },
+    {
+      "id": 272,
+      "name": "Sprout charm",
+      "type": "heal",
+      "tier": 2,
+      "slot": "ability"
+    },
+    {
+      "id": 273,
+      "name": "Bloom charm",
+      "type": "heal",
+      "tier": 3,
+      "slot": "ability"
+    },
+    {
+      "id": 274,
+      "name": "Lifebloom charm",
+      "type": "heal",
+      "tier": 4,
+      "slot": "ability"
+    },
+    {
+      "id": 275,
+      "name": "Evergreen charm",
+      "type": "heal",
+      "tier": 5,
+      "slot": "ability"
+    },
+    {
+      "id": 281,
+      "name": "Threadbare robes",
+      "type": "robe",
+      "tier": 1,
+      "slot": "armor"
+    },
+    {
+      "id": 282,
+      "name": "Mossweave robes",
+      "type": "robe",
+      "tier": 2,
+      "slot": "armor"
+    },
+    {
+      "id": 283,
+      "name": "Grovekeeper robes",
+      "type": "robe",
+      "tier": 3,
+      "slot": "armor"
+    },
+    {
+      "id": 284,
+      "name": "Moonweave robes",
+      "type": "robe",
+      "tier": 4,
+      "slot": "armor"
+    },
+    {
+      "id": 285,
+      "name": "Elderweave robes",
+      "type": "robe",
+      "tier": 5,
+      "slot": "armor"
+    },
+    {
+      "id": 291,
+      "name": "Hide vest",
+      "type": "light",
+      "tier": 1,
+      "slot": "armor"
+    },
+    {
+      "id": 292,
+      "name": "Leafscale jacket",
+      "type": "light",
+      "tier": 2,
+      "slot": "armor"
+    },
+    {
+      "id": 293,
+      "name": "Thornhide armor",
+      "type": "light",
+      "tier": 3,
+      "slot": "armor"
+    },
+    {
+      "id": 294,
+      "name": "Shadowleaf armor",
+      "type": "light",
+      "tier": 4,
+      "slot": "armor"
+    },
+    {
+      "id": 295,
+      "name": "Wildheart armor",
+      "type": "light",
+      "tier": 5,
+      "slot": "armor"
+    },
+    {
+      "id": 301,
+      "name": "Scrap plate",
+      "type": "heavy",
+      "tier": 1,
+      "slot": "armor"
+    },
+    {
+      "id": 302,
+      "name": "Barksteel plate",
+      "type": "heavy",
+      "tier": 2,
+      "slot": "armor"
+    },
+    {
+      "id": 303,
+      "name": "Ironroot plate",
+      "type": "heavy",
+      "tier": 3,
+      "slot": "armor"
+    },
+    {
+      "id": 304,
+      "name": "Stoneheart plate",
+      "type": "heavy",
+      "tier": 4,
+      "slot": "armor"
+    },
+    {
+      "id": 305,
+      "name": "Worldroot plate",
+      "type": "heavy",
+      "tier": 5,
+      "slot": "armor"
+    },
+    {
+      "id": 311,
+      "name": "Vitality band",
+      "type": "health",
+      "tier": 1,
+      "slot": "ring"
+    },
+    {
+      "id": 312,
+      "name": "Vitality ring",
+      "type": "health",
+      "tier": 2,
+      "slot": "ring"
+    },
+    {
+      "id": 313,
+      "name": "Vitality seal",
+      "type": "health",
+      "tier": 3,
+      "slot": "ring"
+    },
+    {
+      "id": 314,
+      "name": "Vitality crest",
+      "type": "health",
+      "tier": 4,
+      "slot": "ring"
+    },
+    {
+      "id": 315,
+      "name": "Vitality crown",
+      "type": "health",
+      "tier": 5,
+      "slot": "ring"
+    },
+    {
+      "id": 321,
+      "name": "Might band",
+      "type": "attack",
+      "tier": 1,
+      "slot": "ring"
+    },
+    {
+      "id": 322,
+      "name": "Might ring",
+      "type": "attack",
+      "tier": 2,
+      "slot": "ring"
+    },
+    {
+      "id": 323,
+      "name": "Might seal",
+      "type": "attack",
+      "tier": 3,
+      "slot": "ring"
+    },
+    {
+      "id": 324,
+      "name": "Might crest",
+      "type": "attack",
+      "tier": 4,
+      "slot": "ring"
+    },
+    {
+      "id": 325,
+      "name": "Might crown",
+      "type": "attack",
+      "tier": 5,
+      "slot": "ring"
+    },
+    {
+      "id": 331,
+      "name": "Precision band",
+      "type": "dexterity",
+      "tier": 1,
+      "slot": "ring"
+    },
+    {
+      "id": 332,
+      "name": "Precision ring",
+      "type": "dexterity",
+      "tier": 2,
+      "slot": "ring"
+    },
+    {
+      "id": 333,
+      "name": "Precision seal",
+      "type": "dexterity",
+      "tier": 3,
+      "slot": "ring"
+    },
+    {
+      "id": 334,
+      "name": "Precision crest",
+      "type": "dexterity",
+      "tier": 4,
+      "slot": "ring"
+    },
+    {
+      "id": 335,
+      "name": "Precision crown",
+      "type": "dexterity",
+      "tier": 5,
+      "slot": "ring"
+    },
+    {
+      "id": 341,
+      "name": "Swiftness band",
+      "type": "speed",
+      "tier": 1,
+      "slot": "ring"
+    },
+    {
+      "id": 342,
+      "name": "Swiftness ring",
+      "type": "speed",
+      "tier": 2,
+      "slot": "ring"
+    },
+    {
+      "id": 343,
+      "name": "Swiftness seal",
+      "type": "speed",
+      "tier": 3,
+      "slot": "ring"
+    },
+    {
+      "id": 344,
+      "name": "Swiftness crest",
+      "type": "speed",
+      "tier": 4,
+      "slot": "ring"
+    },
+    {
+      "id": 345,
+      "name": "Swiftness crown",
+      "type": "speed",
+      "tier": 5,
+      "slot": "ring"
+    }
+  ]
+}

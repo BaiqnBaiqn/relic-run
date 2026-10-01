@@ -1,0 +1,6 @@
+html,body{height:auto;min-height:100%;overflow:auto;background:#e1e7d8}
+body{min-height:100dvh;display:grid;place-items:center;padding:20px}
+#root{width:min(1240px,100%);height:auto;overflow:visible}
+.rr-guest{height:min(1060px,calc(100dvh - 40px));min-height:660px;padding-bottom:14px;border:1px solid #111;border-radius:0;overflow:hidden;box-shadow:6px 6px 0 #111}
+@media(max-width:650px){body{padding:10px}.rr-guest{height:calc(100dvh - 20px)}}
+@media(max-width:450px){body{padding:0}.rr-guest{border-radius:0;box-shadow:none}}

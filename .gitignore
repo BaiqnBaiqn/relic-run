@@ -1,0 +1,12 @@
+node_modules/
+.sdk-source/
+games/*/.friendsdk/
+games/*/.guest/
+artifacts/
+.DS_Store
+*.log
+games/*/.preview/
+
+*.blend1
+.publish/
+.submission-repo/

@@ -1,0 +1,838 @@
+{
+  "image": "atlas.png",
+  "width": 80,
+  "height": 240,
+  "bitDepth": 1,
+  "palette": [
+    "#ffffff",
+    "#000000"
+  ],
+  "transparentIndex": 0,
+  "frames": {
+    "201": {
+      "name": "Twig wand",
+      "type": "wand",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "202": {
+      "name": "Root wand",
+      "type": "wand",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "203": {
+      "name": "Briar wand",
+      "type": "wand",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "204": {
+      "name": "Elder wand",
+      "type": "wand",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "205": {
+      "name": "Heartwood wand",
+      "type": "wand",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "211": {
+      "name": "Reed bow",
+      "type": "bow",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "212": {
+      "name": "Willow bow",
+      "type": "bow",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "213": {
+      "name": "Bramble bow",
+      "type": "bow",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "214": {
+      "name": "Moonwood bow",
+      "type": "bow",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "215": {
+      "name": "Worldtree bow",
+      "type": "bow",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "221": {
+      "name": "Rustblade",
+      "type": "sword",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 32,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "222": {
+      "name": "Ironleaf sword",
+      "type": "sword",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 32,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "223": {
+      "name": "Briar greatsword",
+      "type": "sword",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 32,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "224": {
+      "name": "Elder cleaver",
+      "type": "sword",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 32,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "225": {
+      "name": "Crownfall blade",
+      "type": "sword",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 32,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "231": {
+      "name": "Flint dagger",
+      "type": "dagger",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 48,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "232": {
+      "name": "Leafknife",
+      "type": "dagger",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 48,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "233": {
+      "name": "Thornfang",
+      "type": "dagger",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 48,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "234": {
+      "name": "Nightbriar dagger",
+      "type": "dagger",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 48,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "235": {
+      "name": "Ghostpetal blade",
+      "type": "dagger",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 48,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "241": {
+      "name": "Flicker rune",
+      "type": "dash",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 64,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "242": {
+      "name": "Windstep rune",
+      "type": "dash",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 64,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "243": {
+      "name": "Gale rune",
+      "type": "dash",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 64,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "244": {
+      "name": "Stormstep rune",
+      "type": "dash",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 64,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "245": {
+      "name": "Horizon rune",
+      "type": "dash",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 64,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "251": {
+      "name": "Pebble ward",
+      "type": "shield",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 80,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "252": {
+      "name": "Bark ward",
+      "type": "shield",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 80,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "253": {
+      "name": "Thorn ward",
+      "type": "shield",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 80,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "254": {
+      "name": "Ironroot ward",
+      "type": "shield",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 80,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "255": {
+      "name": "Ancient ward",
+      "type": "shield",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 80,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "261": {
+      "name": "Knuckle sigil",
+      "type": "bash",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 96,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "262": {
+      "name": "Ram sigil",
+      "type": "bash",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 96,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "263": {
+      "name": "Quake sigil",
+      "type": "bash",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 96,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "264": {
+      "name": "Ruin sigil",
+      "type": "bash",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 96,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "265": {
+      "name": "Cataclysm sigil",
+      "type": "bash",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 96,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "271": {
+      "name": "Dew charm",
+      "type": "heal",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 112,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "272": {
+      "name": "Sprout charm",
+      "type": "heal",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 112,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "273": {
+      "name": "Bloom charm",
+      "type": "heal",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 112,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "274": {
+      "name": "Lifebloom charm",
+      "type": "heal",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 112,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "275": {
+      "name": "Evergreen charm",
+      "type": "heal",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 112,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "281": {
+      "name": "Threadbare robes",
+      "type": "robe",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 128,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "282": {
+      "name": "Mossweave robes",
+      "type": "robe",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 128,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "283": {
+      "name": "Grovekeeper robes",
+      "type": "robe",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 128,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "284": {
+      "name": "Moonweave robes",
+      "type": "robe",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 128,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "285": {
+      "name": "Elderweave robes",
+      "type": "robe",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 128,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "291": {
+      "name": "Hide vest",
+      "type": "light",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 144,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "292": {
+      "name": "Leafscale jacket",
+      "type": "light",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 144,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "293": {
+      "name": "Thornhide armor",
+      "type": "light",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 144,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "294": {
+      "name": "Shadowleaf armor",
+      "type": "light",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 144,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "295": {
+      "name": "Wildheart armor",
+      "type": "light",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 144,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "301": {
+      "name": "Scrap plate",
+      "type": "heavy",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 160,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "302": {
+      "name": "Barksteel plate",
+      "type": "heavy",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 160,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "303": {
+      "name": "Ironroot plate",
+      "type": "heavy",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 160,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "304": {
+      "name": "Stoneheart plate",
+      "type": "heavy",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 160,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "305": {
+      "name": "Worldroot plate",
+      "type": "heavy",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 160,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "311": {
+      "name": "Vitality band",
+      "type": "health",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 176,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "312": {
+      "name": "Vitality ring",
+      "type": "health",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 176,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "313": {
+      "name": "Vitality seal",
+      "type": "health",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 176,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "314": {
+      "name": "Vitality crest",
+      "type": "health",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 176,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "315": {
+      "name": "Vitality crown",
+      "type": "health",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 176,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "321": {
+      "name": "Might band",
+      "type": "attack",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 192,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "322": {
+      "name": "Might ring",
+      "type": "attack",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 192,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "323": {
+      "name": "Might seal",
+      "type": "attack",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 192,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "324": {
+      "name": "Might crest",
+      "type": "attack",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 192,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "325": {
+      "name": "Might crown",
+      "type": "attack",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 192,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "331": {
+      "name": "Precision band",
+      "type": "dexterity",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 208,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "332": {
+      "name": "Precision ring",
+      "type": "dexterity",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 208,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "333": {
+      "name": "Precision seal",
+      "type": "dexterity",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 208,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "334": {
+      "name": "Precision crest",
+      "type": "dexterity",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 208,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "335": {
+      "name": "Precision crown",
+      "type": "dexterity",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 208,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "341": {
+      "name": "Swiftness band",
+      "type": "speed",
+      "tier": 1,
+      "frame": {
+        "x": 0,
+        "y": 224,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "342": {
+      "name": "Swiftness ring",
+      "type": "speed",
+      "tier": 2,
+      "frame": {
+        "x": 16,
+        "y": 224,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "343": {
+      "name": "Swiftness seal",
+      "type": "speed",
+      "tier": 3,
+      "frame": {
+        "x": 32,
+        "y": 224,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "344": {
+      "name": "Swiftness crest",
+      "type": "speed",
+      "tier": 4,
+      "frame": {
+        "x": 48,
+        "y": 224,
+        "w": 16,
+        "h": 16
+      }
+    },
+    "345": {
+      "name": "Swiftness crown",
+      "type": "speed",
+      "tier": 5,
+      "frame": {
+        "x": 64,
+        "y": 224,
+        "w": 16,
+        "h": 16
+      }
+    }
+  }
+}
