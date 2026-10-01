@@ -3,9 +3,14 @@ import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,readdir,mkdir} from 'node:fs/promises';
 import {chromium} from 'playwright';
+import {createHash} from 'node:crypto';
 const {installFixture,createArtworkFixture,SECOND_OWNER}=await import(new URL('./browser-fixture.mjs',import.meta.resolve('@rarefriends/friendsdk/testing')));
 const root=new URL('../games/relic-run/.preview/',import.meta.url),files=await readdir(root);
 assert.deepEqual(files.sort(),['.nojekyll','game.css','game.html','game.js','host.css','host.js','index.html'],'Public output has no guest page or test fixtures');
+for(const [html,name] of [['index.html','host'],['game.html','game']]){
+  const source=await readFile(new URL(html,root),'utf8');
+  for(const ext of ['js','css']){const hash=createHash('sha256').update(await readFile(new URL(`${name}.${ext}`,root))).digest('hex').slice(0,16);assert.ok(source.includes(`./${name}.${ext}?v=${hash}`),'Each release references its current asset hashes');}
+}
 const server=createServer(async(req,res)=>{
   const name=new URL(req.url,'http://local').pathname.slice(1)||'index.html';
   if(!files.includes(name))return res.writeHead(404).end();
@@ -16,6 +21,12 @@ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({headless:true}),errors=[];
 await mkdir('artifacts',{recursive:true});
 try{
+  const embedded=await browser.newContext(),embedPage=await embedded.newPage();
+  await embedPage.goto(origin);
+  await embedPage.evaluate(()=>{document.body.replaceChildren(Object.assign(document.createElement('iframe'),{src:location.href}));});
+  await embedPage.frameLocator('iframe').getByRole('heading',{name:'Open Relic Run directly.'}).waitFor();
+  assert.equal(await embedPage.frameLocator('iframe').locator('.rr-friend-list').count(),0,'Embedded host does not mount wallet UI');
+  await embedded.close();
   for(const width of [1100,390]){
     const context=await browser.newContext({viewport:{width,height:850},reducedMotion:'reduce'}),page=await context.newPage();
     const game=page.frameLocator('iframe');page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
@@ -46,6 +57,10 @@ try{
     assert.match(await game.getByTestId('rf-balance').locator('..').innerText(),/test RF/);
     assert.equal(await game.locator('.rr-game').getAttribute('data-friend-wallet'),'0x3333333333333333333333333333333333333333');
     assert.ok(await game.getByRole('button',{name:'Enter · 100 RF',exact:true}).isEnabled());
+    const frameBox=await page.locator('.rf-game-frame').boundingBox();
+    assert.ok(frameBox.width<=960&&frameBox.height<=640,'Submission viewport stays within 960 × 640');
+    assert.ok(await game.getByRole('button',{name:'Enter · 100 RF',exact:true}).isVisible());
+    assert.equal(await game.locator('body').evaluate(()=>document.documentElement.scrollHeight>innerHeight||document.documentElement.scrollWidth>innerWidth),false,'The sandbox itself does not overflow');
     await game.locator('.rr-game').screenshot({path:`artifacts/submission-owned-friend-${width}.png`});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
     await game.getByRole('button',{name:'Choose Friend',exact:true}).click();

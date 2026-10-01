@@ -55,6 +55,6 @@ export function SandboxHost({friend,account,client,onChoose}:{friend:PlayableFri
   },[scope,friend.id,friend.walletAddress,account]);
   return <div ref={container} className="rr-sdk-host">
     <div className="rr-trusted-status"><span>RELIC RUN · SIMULATED PREVIEW</span><span>{account.slice(0,6)}…{account.slice(-4)}</span><button onClick={()=>{let active=false;try{const raw=localStorage.getItem(SANDBOX_SAVE_KEY),entry=raw?JSON.parse(raw).accounts[scope]?.active:null;active=Boolean(entry&&!entry.ended);}catch{}if(!active||window.confirm('Leaving counts as defeat: equipped ordinary items and potion bonuses are lost, and this Friend recovers for 12 hours. Leave this expedition?'))onChoose();}}>Choose another Friend</button></div>
-    {ready?<ConnectedGameHost definition={runtimeDefinition} frameUrl="./game.html" selectedFriend={{id:friend.id,label:friend.label,kind:'owned',walletAddress:friend.walletAddress}} account={account} chainId={4663} publicClient={client}/>:<p role={error?'alert':'status'}>{error||'Opening your save. Close other game tabs if this one is waiting.'}</p>}
+    {ready?<ConnectedGameHost definition={runtimeDefinition} frameUrl={typeof __PREVIEW_FRAME_URL__==='string'?__PREVIEW_FRAME_URL__:'./game.html'} selectedFriend={{id:friend.id,label:friend.label,kind:'owned',walletAddress:friend.walletAddress}} account={account} chainId={4663} publicClient={client}/>:<p role={error?'alert':'status'}>{error||'Opening your save. Close other game tabs if this one is waiting.'}</p>}
   </div>;
 }

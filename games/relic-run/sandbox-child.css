@@ -1,4 +1,27 @@
 html,body,#root{width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:#f6f5ef}
 .rr-game.rr-guest{width:100%;height:100%!important;min-height:0!important;border:0;box-shadow:none}
+/* Submission controls fit the 960 × 640 SDK frame; the world stays 960 × 960. */
+.rr-game.rr-guest:not([data-expedition="true"]){padding-bottom:0}
+.rr-game .rr-topbar{height:40px;padding-inline:12px}
+.rr-game .rr-roster{padding:5px 10px}
+.rr-game .rr-roster-card{min-height:36px;padding-block:3px}
+.rr-game .rr-camp-copy{top:10px;left:10px;max-height:calc(100% - 20px);padding:10px;width:290px}
+.rr-game .rr-camp h1{font-size:23px;margin:7px 0}
+.rr-game .rr-camp p{font-size:10px;line-height:1.4;margin-bottom:8px}
+.rr-game .rr-entry-boost{padding:7px;margin-bottom:8px}
+.rr-game .rr-camp-note{margin-top:6px}
+.rr-game .rr-level-select{gap:4px}
+.rr-game .rr-level-select select{padding:6px}
+.rr-game .rr-inventory-dock{padding:7px 10px 4px}
+.rr-game .rr-storefront{padding:9px 12px}
+.rr-game .rr-underbar{padding:2px 10px}
+@media(max-width:650px){
+  .rr-game .rr-camp-copy{width:calc(100% - 20px);right:10px}
+  .rr-game .rr-camp-copy{display:flex;flex-direction:column}
+  .rr-game .rr-camp-copy .rr-camp-actions{order:-1;margin-bottom:9px}
+  .rr-game .rr-camp-actions .rr-primary{flex:1}
+  .rr-game .rr-camp-side{display:none}
+  .rr-game .rr-storefront h2{font-size:15px}
+}
 .rr-save-status{position:fixed;inset:0;z-index:1000;display:grid;place-content:center;gap:14px;background:#f6f5eff0;color:#111;font:13px monospace;text-align:center}
 .rr-save-status button{font:inherit;padding:10px;background:#b9d984;border:1px solid #111}

@@ -45,6 +45,10 @@ canonical NFT-wallet and artwork verification. The chosen NFT's canonical
 animation is the player's avatar. Account or network changes invalidate the
 session. No RF funding, signatures, approvals or transactions are needed.
 
+The public SDK frame is at most 960 × 640; the 960 × 960 world is rendered inside
+it. Keyboard, touch, pause, mute, reduced-motion and error/retry controls are
+included. The public host must be opened directly, not embedded on another site.
+
 The preview is simulated throughout: RF, GEMZ, inventory, chests, daily seasons,
 jackpots, test faucets and recovery timers have no redeemable real-world value.
 
@@ -79,6 +83,13 @@ carry RF forward. Jackpots carry separately. The 95% player allocation is not a
 guaranteed personal return; success, chest spending, competing contributions and
 jackpot timing affect outcomes. In this prototype the shared world is only
 within one browser, not a server-wide pool.
+
+The [source README's tokenomics explanation](https://github.com/BaiqnBaiqn/relic-run#tokenomics-what-rf-and-gemz-do)
+includes a worked payout example, progression efficiency, chest opportunity cost,
+jackpot timing, benefits to Rare Friends and sustainability assumptions. GEMZ
+claims redistribute funded RF; they do not create RF or guarantee a profitable
+return. There is no automatic RF burn or buyback. The 5% ecosystem allocation is
+simulated accounting until a funded treasury/settlement system is implemented.
 
 Only a boss clear rolls its jackpot: **0.25%** chance, paying **80%** of its
 current pot and an exclusive soulbound weapon; **20%** stays in the pot. Regular
@@ -129,7 +140,8 @@ game for the selected Friend. No wallet action or signature is requested.
 
 The trusted host persists simulated progress through a session-bound MessagePort.
 It checks the source frame, selected token ID, canonical wallet scope, save
-schema, RF/GEMZ conservation and other Friends' records, then acknowledges each
+schema, RF/GEMZ conservation, paid-entry/reserve transitions, exact season
+settlements and other Friends' records/contributions, then acknowledges each
 write. Slow/failed saves pause play and offer retry. A global Web Lock prevents
 concurrent writers; reload/exit recovers unfinished runs as defeat.
 
@@ -174,7 +186,7 @@ npm run test:guest
 npm run check:contracts
 ```
 
-October 1, 2026 verification: 80 unit tests, TypeScript, economy validation,
+October 1, 2026 verification: 84 unit tests, TypeScript, economy validation,
 SDK game validation, builds and desktop/mobile browser checks passed. Unit tests
 cover all five fights, every chest tier/odds, soulbound effects, exact funding,
 24-hour settlement, potion limits, save isolation and death recovery.
@@ -185,6 +197,9 @@ zero, stale selections, missing artwork and no signing. Public layout is checked
 at 1100px and 390px. The sandbox gameplay suite verifies blocked parent/storage
 access, chest purchase with a failed-save retry, selection/reload restoration,
 a full boss clear, exact pool funding, and abandoned-run item loss/cooldown.
+The public checks also verify frame bounds, blocked wallet-host embedding and
+content-versioned release assets. Adversarial save tests reject cross-Friend
+contribution theft, direct reserve diversion and rewritten settlement history.
 Guest checks exercise repeated clears, equipment, potions, redemption and touch
 controls. Fixture code is not bundled in either public document.
 
@@ -199,6 +214,12 @@ multiplayer season accounting and separately reviewed RF contracts. Keep the
 public preview simulated. A current browser with HTTPS and Web Locks is required.
 Another active game tab waits for the first to close. No staking or GEMZ token
 is implemented; GEMZ is an internal currency tied to simulated RF redemption.
+
+`npm audit` reported zero known dependency vulnerabilities at review time.
+Read the [security findings and remaining limits](https://github.com/BaiqnBaiqn/relic-run/blob/main/docs/SECURITY_REVIEW.md)
+and [submission review](https://github.com/BaiqnBaiqn/relic-run/blob/main/docs/SUBMISSION_REVIEW.md).
+The bridge does not prove combat, random outcomes or self-reported GEMZ issuance;
+it is not an anti-cheat or real-fund custody system.
 
 ## Credits
 

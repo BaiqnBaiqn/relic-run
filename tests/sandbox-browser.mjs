@@ -51,7 +51,9 @@ try{
     const canvas=game.locator('.rr-stage>canvas'),pos=await canvas.evaluate(e=>({x:+e.dataset.x,y:+e.dataset.y}));
     if(Math.hypot(route[point][0]-pos.x,route[point][1]-pos.y)<25)point=(point+1)%route.length;
     if(point!==last){const box=await canvas.boundingBox(),p=project(...route[point]),scale=Math.min(box.width/VIEW_WIDTH,box.height/VIEW_HEIGHT);await canvas.click({position:{x:(box.width-VIEW_WIDTH*scale)/2+p.x*scale,y:(box.height-VIEW_HEIGHT*scale)/2+p.y*scale},force:true});last=point;}
-    const ability=game.getByRole('button',{name:'Use ability',exact:true});if(await ability.isEnabled())await ability.click({force:true});await page.clock.runFor(600);
+    // A final auto-attack can reach the gate/victory between reads. Ability
+    // controls disappear then, so don't wait for a control in the next phase.
+    const ability=game.getByRole('button',{name:'Use ability',exact:true});if(await ability.isVisible()&&await ability.isEnabled())await ability.click({force:true});await page.clock.runFor(600);
   }
   assert.equal(await game.locator('.rr-game').getAttribute('data-phase'),'won');
   saved=await savedWhen('ended');

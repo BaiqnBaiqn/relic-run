@@ -52,4 +52,8 @@ function WalletGame(){
     <p className="rr-muted">Ownership checks are read-only. RF, GEMZ, equipment, pools and recovery timers are simulated and saved for the connected wallet and individual Friend in this browser. Reconnect here to restore your items. Saves do not sync across devices. No signatures or transactions.</p>
   </section>;
 }
-createRoot(document.getElementById('root')!).render(<WalletGame/>);
+// Public ownership/connection UI must not run beneath an untrusted site's UI.
+// This is a preview guard; production hosting should also set frame-ancestors.
+createRoot(document.getElementById('root')!).render(submissionPreview&&window.top!==window.self
+  ?<section className="rr-wallet-screen"><h1>Open Relic Run directly.</h1><p>Wallet connection is available only in the game's own tab.</p><a href={window.location.href} target="_blank" rel="noopener noreferrer">Open Relic Run</a></section>
+  :<WalletGame/>);
